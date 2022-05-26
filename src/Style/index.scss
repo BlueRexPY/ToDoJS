@@ -1,0 +1,105 @@
+$font-color: #E5E5E5;
+$body-color: #191919;
+$background-color: #161A23;
+$main-color: #4040C2;
+$important-light-color: #e982383b;
+$important-color: #E98238;
+
+*{
+    transition: 0.1s;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $body-color;
+    color: $font-color;
+}
+
+.App {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: auto;
+    padding: 20px;
+    background-color: $background-color;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Title {
+    height: 10%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+}
+.Dark{
+    font-weight: 400;
+    color: #838383;
+    font-size: 25px;
+}
+
+
+%input{
+    margin: 0;
+    border: $main-color 1px solid;
+    background-color: $background-color;
+    transition: 0.1s;
+    color: $font-color;
+    font-size: 20px;
+}
+
+.Input{
+    @extend %input;
+    background-color: $background-color;
+}
+.Input:active{
+    @extend %input;
+    background-color: $background-color;
+}
+.Input:hover{
+    @extend %input;
+    background-color: $background-color;
+}
+.Input:focus{
+    @extend %input;
+    background-color: $background-color;
+}
+
+.Item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items:baseline;
+    border: 1px solid $main-color;
+    color: $font-color;
+    background-color: $background-color;
+    
+}
+
+.Done{
+    text-decoration: line-through;
+}
+
+.Importent{
+    background-color: $important-light-color;
+    color: $important-color;
+    border: 1px solid $important-color;
+}
+.Buttons{
+    margin: 5px;
+}
+
+.BottomNavigation{
+    padding: 15px;
+}
